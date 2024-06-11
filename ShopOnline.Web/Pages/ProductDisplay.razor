@@ -1,0 +1,22 @@
+﻿@inherits ProductDisplayBase
+
+@foreach (var item in Products)
+{
+
+	<div class="col-md-3 mb-3">
+		<a href="/ProductDetails/@item.Id">
+			<div class="card">
+				<div class="card-body">
+					<img class="img-thumbnail" src="@item.ImageURL" />
+					<div class="card-title">
+						@item.Name
+					</div>
+					<p>@("\u20B5")@item.Price</p>
+				</div>
+
+			</div>
+		</a>
+
+	</div>
+
+}

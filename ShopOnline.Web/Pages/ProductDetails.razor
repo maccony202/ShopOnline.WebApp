@@ -1,0 +1,18 @@
+﻿@page "/ProductDetails/{id:int}"
+@inherits ProductDetailsBase
+
+@if(Product == null)
+{
+	<h3>Loading</h3>
+}else{
+	<h3>Product Details</h3>
+	<div class="container">
+		<div class="col-md-3">
+			<img src="@Product.ImageURL"/>
+			<div>
+				<b>@Product.Price.ToString("C")&nbsp;(@Product.Qty items in stocks)</b>
+				<p>@Product.Name</p>
+			</div>
+		</div>
+	</div>
+}
